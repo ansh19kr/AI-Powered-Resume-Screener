@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Screener</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    
+    <style>
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url("{% static 'judo.jpg' %}") no-repeat center center fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 AI Resume Screener</h1>
+        <p>Upload your resume and job description to check the match percentage.</p>
+
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div>
+            <label for="resume" class="file-label">📄 Upload Resume:</label>
+            <input type="file" name="resume" required class="file-input">
+            </div>
+            <div>
+            <label for="job_description" class="file-label">📜 Upload Job Description:</label>
+            <input type="file" name="job_description" required class="file-input">
+            </div>
+            <button type="submit" class="btn">Analyze Now</button>
+        </form>
+    </div>
+</body>
+</html>

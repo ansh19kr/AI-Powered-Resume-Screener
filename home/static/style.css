@@ -1,0 +1,115 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url("/static/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Glassmorphism Effect */
+.container {
+    position: centre;
+    right: 10px;
+    top: 120px;
+    border: 1px solid white;
+    color: white;
+    margin: 20px 60px;
+    padding: 70px 20px;
+    width: 45%;
+    border-radius: 15px;
+
+}
+
+.container h1 {
+    text-align: center;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+.container button {
+    display: block;
+    width: 136px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffcc70;
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+/* Upload Fields */
+.file-label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.file-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.file-input:hover {
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Button */
+.btn {
+        background: linear-gradient(90deg, #7e93ff, #1756dd);
+        margin: 0px 9px;
+        background-color: rgb(7, 145, 199);
+        color: white;
+        border-radius: 15px;
+        padding: 4px 14px;
+        border: 2px solid #242a2b;
+        cursor: pointer;
+    }
+
+.btn:hover {
+        background-color: rgb(53, 53, 53);
+    }
+
+/* Error message styling */
+.error {
+    background: rgba(255, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
